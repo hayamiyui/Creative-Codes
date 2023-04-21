@@ -27,12 +27,6 @@ PLANT = platform.system()
 DEV_NULL = open(os.devnull)
 PING_RESULT = []
 
-match PLANT:
-    case 'MacOS':
-        PING_ARGS = ['ping','-n','-w','1']
-    case _:
-        PING_ARGS = ['ping','-c','1','-w','1']
-
 root = Tk()
 root.title('Creative Hub')
 root.geometry('852x480+150+100')
@@ -108,7 +102,7 @@ class Servers(object):
                 path = data.splitlines()[0].split()[1]
 
 root.config(menu = menubar)
-root.mainloop()
+
 
 def print_hi(name):
     print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
@@ -116,3 +110,5 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
+
+root.mainloop()
