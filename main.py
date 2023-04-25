@@ -42,6 +42,9 @@ la3 = tk.Label(root,text='Love Girlfriend')
 la3.place(x=140,y=200)
 la4 = tk.Label(root,text='Creative Engine')
 la4.place(x=140,y=255)
+la5 = tk.Label(root,text='The Dream of Clover')
+la5.place(x=120,y=300)
+
 root.resizable(0,0)
 
 #button
@@ -102,7 +105,7 @@ class Servers(object):
                 path = data.splitlines()[0].split()[1]
 
 root.config(menu = menubar)
-
+root.mainloop()
 
 def print_hi(name):
     print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
@@ -110,5 +113,3 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
-
-root.mainloop()
