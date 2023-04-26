@@ -20,6 +20,11 @@ elif('Linux' == platform.system()):
 else:
     print('Others')
 
+current_time = int(time.time())
+print(current_time)
+localtime = time.localtime(current_time)
+dt = time.strftime('%Y:%m:%d %H:%M:%S', localtime)
+print(dt)
 curr_time = datetime.datetime.now()
 timestamp = curr_time.date()
 
