@@ -12,6 +12,7 @@ import datetime
 import time
 import socket
 import platform
+import os
 
 if('Windows' == platform.system()):
     print('Windows')
@@ -38,6 +39,11 @@ root.geometry('852x480+150+100')
 
 def label(root, text, font, fg):
     pass
+
+#Creat files
+def mkdir():
+    file = open('/Users/cynthiaelvira/Desktop/cache.txt', 'w')
+    file.write('cache')
 
 la1= tk.Label(root,text='Whats New?')
 la1.pack()
@@ -118,3 +124,4 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
+    mkdir()
