@@ -60,6 +60,8 @@ btn2 = tkinter.Button(text='PLAY',width=5,height=2)
 btn2.place(x=520,y=200)
 btn3 = tkinter.Button(text='RUN',width=5,height=2)
 btn3.place(x=520,y=255)
+btn4 = tkinter.Button(text='PLAY',width=5,height=2)
+btn4.place(x=520,y=315)
 
 menubar = tk.Menu(root)
 
@@ -89,10 +91,10 @@ menubar.add_cascade(label='Go',menu=viewmenu)
 host = '127.0.0.1'
 port = 8000
 addr = (host,port)
-
+'''
 server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 server.bind(addr)
-server.listen(3)
+server.listen(3)'''
 
 server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
