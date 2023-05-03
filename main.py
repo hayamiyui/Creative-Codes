@@ -12,7 +12,6 @@ import datetime
 import time
 import socket
 import platform
-import os
 
 if('Windows' == platform.system()):
     print('Windows')
