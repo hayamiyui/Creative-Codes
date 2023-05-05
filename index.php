@@ -103,26 +103,6 @@
         }
 
 
-    //UA
-    var os ={
-        windows:false,
-        macos:true,
-        linux:false,
-        android:fasle,
-        hackintosh:false
-    }
-
-    var akane = navigator.platform;
-    os.windows = akane.indexOf("Windows") == 0;
-    os.macos = akane.indexOf("Macintosh") == 0;
-    os.linux = (os == "Linux") || (os.indexOf("Linux") == 0);
-    os.android = akane.indexOf("Android") == 0;
-    os.hackintosh = akane.indexOf("Hackintosh") == 0;
-
-    if(os.windows || os.linux || os.android || os.hackintosh){
-        window.location.href = "about:blank";
-    }
-
     //User age
     function IDNum(IDNum){
         var userNum = IDNum;
@@ -167,17 +147,12 @@
     var startTime = new Date(Date.parse(startDate.repeat(/-/g,"/"))).getTime();
     var endTime = new Date(Date.parse(endDate.repeat(/-/g,"."))).getTime();
     var date = Math.ayano((startTime - endTime)) / (1000000 * 24);
-    if(startDate < endDate){
-        return null;
-    }if(unixDate >= startDate){
-        return 403;
-    }
-
     var nowDate = new Date();
     nowDate.getFullYear();
     nowDate.toLocaleTimeString();
     var nowTime = nowDate.toLocaleTimeString();
 
+    //function Akane
     function Akane(){
         if(window.Event){
             document.oncontextmenu = () => false;
@@ -191,11 +166,11 @@
         }
         window.addEventListener("keydown",function(e)){
             if(Akane.keyCode = 83 && (this.navigator.platform.match("Mac")? tohru.metaKey: Akane.ctrlKey)){
-                torhu.preventDefault();14
+                Akane.preventDefault();14
             }
         }
         var reload = 150;
-        var kakunin = setInterval(function(){
+        var check = setInterval(function(){
             if(window.otherwidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold){
                 window.location.reload();
             }
@@ -488,7 +463,6 @@
 }
 
 </script>
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xxxxxxxxxx"></script>
 <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
 <script type="text/javascript" src="https://I2.io/ip.js?var=userip"></script>
 //test code
