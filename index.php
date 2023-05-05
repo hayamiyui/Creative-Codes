@@ -1,191 +1,48 @@
 <script type="text/javascript" src="https://ip.ws.126.net/ipquery"></script>
 <script>
     //Copyright 2023 Creative. All rights reserved.
-    //Block the following provinces
-    var province = localAddress.province;
-    var city = localAddress.city;
-    var district = localAddress.district;
-    if(province.indexOf('辽宁')!=-1){
+
+    var country = localAddress.country;
+    if(country.indexOf('中国')!=-1){
         window.location.href = 'about:blank';
     }
-    if(province.indexOf('吉林')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('黑龙江')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('山东')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('陕西')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('山西')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('浙江')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('福建')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('广西')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('云南')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('安徽')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('湖南')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('湖北')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('四川')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('河北')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('河南')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('宁夏')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('甘肃')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('新疆')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('青海')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('内蒙古')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('海南')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('台湾')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('江苏')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('江西')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('浙江')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('贵州')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(province.indexOf('海南')!=-1){
-        window.location.href = 'about:blank';
-    }
-    //Block the following cities
-    if(city.indexOf('沈阳')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('磐石')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('宁德')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('宜昌')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('吉首')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('肇庆')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('北京')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('上海')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('天津')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('重庆')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('开平')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('台山')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('恩平')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('河源')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('深圳')!=-1){
-        window.location.href = 'about:blank';
-    }
-    if(city.indexOf('鹤山')!=-1){
-        window.location.href = 'about:blank';
-    }
-    //Do not block
-    if(district.indexOf('蓬江')!=-1){
-        //window.location.href = 'about:blank';
-    }
-    if(district.indexOf('江海')!=-1){
-        //window.location.href = 'about:blank';
-    }
-    if(district.indexOf('新会')!=-1){
-        //window.location.href = 'about:blank';
-    }
-    //Block district
-    if(district.indexOf('南山')!=-1){
-        window.location.href = 'about:blank';
-    }
+
     //Other
     function Clearwords(str){
         if(str != null && str != ""){
             return str.replace(/(\t|\r|\n|\s|\b|\f|\"|\u)/ig,"").replace(/(\\)/ig,"");
         }
-        //Block words, banned, do not using Blocker
+        //Block words
         var arr = ['悠然','玖雯子','穆声','淮鸢','烟雨','云猫','鹰目','鞠五爷','狼人','Crab'
             ,'笑死','就这','小黑子','只因','蔡徐坤','孙笑川','华为','荣耀','中兴','OPPO','ViVO','小米',
-            '红米','iQOO','黑鲨','原神','崩坏','Mate','Magic','Surface','南山必胜客','龙岗无敌手'
-            ,'海淀不倒翁','余杭常青树','徐逸','碧诗','bishi','9bishi','陈睿','李旎','谭成锋','森德默子'
+            '红米','iQOO','黑鲨','原神','崩坏','Mate','Magic','Surface','南山必胜客',
+            '龙岗无敌手'
+            ,'海淀不倒翁','余杭常青树','徐逸','碧诗','bishi','9bishi','陈睿','李旎','谭成锋'
+            ,'森德默子'
             ,'孝子','不要笑挑战','力元君','在下','徐','小','CraBBBBBB_21s',
             'bili','bilibili','哔哩哔哩','随风潜入夜','Jiuwenziiii','玖望','玖望鸽','米哈游','Genshin Impact'
             ,'坤','miHoYo','依川川','棉白','沙雕','鲲','淘宝','马云','阿里','拼多多','pdd','taobao',
-            '谷歌','百度','必应','生草','草','translate','机械','纪元','军团','人工生命','陈岑','刘琨'
+            '谷歌','百度','必应','生草','草','translate','机械','纪元','军团','人工生命','陈岑'
+            ,'刘琨'
             ,'任何罪恶终将绳之以法','吴京','孙国帅','久菜合子','CSGO','索尼','某幻君','欣小萌','Official'
-            ,'张维为','眞白花音','梗','柠檬','张三学法日记','学法联盟','裤子大恶魔','嗨氏','黑桐谷歌'
-            ,'吴织亚切大忽悠'.'通訊录好友','小小小小小小氧气','演员','老师好我叫何同学','涼仔','纳豆奶奶'
-            ,'腾讯','视角姬','敖厂长','大只的苏北','卡比同学','解说','GARNiDELiA','LexBurner','晚安ko'
-            ,'机智的党妹','粗犷毛线君','小怂猫人','M木糖M','三十六贱笑','椒盐蛋','TOM表哥','希莉薇娅'
+            ,'张维为','眞白花音','梗','柠檬','张三学法日记','学法联盟','裤子大恶魔','嗨氏'
+            ,'黑桐谷歌'
+            ,'吴织亚切大忽悠'.'通訊录好友','小小小小小小氧气','演员','老师好我叫何同学','涼仔'
+            ,'纳豆奶奶'
+            ,'腾讯','视角姬','敖厂长','大只的苏北','卡比同学','解说','GARNiDELiA','LexBurner'
+            ,'晚安ko'
+            ,'机智的党妹','粗犷毛线君','小怂猫人','M木糖M','三十六贱笑','椒盐蛋','TOM表哥'
+            ,'希莉薇娅'
             ,'潘唐颖','卡慕SaMa','老戴在此','特别中二的q3君','黑猫大少爷','游戏宅男BOY','徐大虾咯'
             ,'Youku','iQiyi','Tencent','机翻','会员制','homo','木毛','ホモ','0','1','2','3','4','5','6',
             ,'Weibo','7','8','9','花少北','Sina'
             ,'王源','wdnmd','u1si','yyds','天明','苏打','baka','小包','秋夕','叶子','iShowSpeed'
             ,'雪','冬の花','悲','大嘘','喜','一个','你是','田所','浩二','观察','鸡','野兽','先辈'
-            ,'nsdd','何世杰','回形针','国家反诈中心','托尔酱龙女仆','赵小姐','温柔的托尔酱'];
-        var vtuber = ['神楽めあ','湊あくあ','時の空','りんご','真白花音','山田赫敏','田中庄司','夏色祭','佐藤希'];
-        var Automata = new Automata();
-        //Gentle elder sister, Tohru
-        var youtuber = ['Dream'];
-        //Unknow realname: towana
+            ,'nsdd','何世杰','回形针','国家反诈中心'];
+        
         var res = str.replace(new RegExp(arr.join('|'),'img'),'*');
-        var res = str.replace(new RegExp(mamoru.join('|'),'img'),'');
-        var res = str.replace(new RegExp(vtuber.join('|'),'img'),'*');
         console.log(res);
+
         //Auto change words
         var txt = $("body").text();
         var newTxt = txt.replace(/Ayase/g,"啓一郎");
@@ -201,9 +58,9 @@
         var newTxt = txt.replace(/Fripside/g,"fripSide");
         var newTxt = txt.replace(/OPENSUSE/g,"openSUSE");
         var newTxt = txt.replace(/arch/g,"Arch Linux");
-        var newTxt = txt.replace(/Dream/g,"Clay");
         console.log(newTxt);
     }
+
     Vue.prototype.separateNum = function(value){
         if(!value)return '0'
         var intPart = Number(value).toFixed(0)
@@ -221,6 +78,7 @@
             }
         }
     }
+
     function index(obj){
         obj.value = obj.value.replace(/[\u4E00-\u9FA5]|[\uFE30-\uFFA0]|[\uFF00-\uFFEF]|[\u4E00-\u9FA5\uF900-\uFA2D][\uFF00-\uFFEF]|/g,'');
         for(i = 0; i < document.getElementsByName('index')[0].value.length; i++){
@@ -238,32 +96,12 @@
             return rs;
         }
     }
-    function languages(){
-        //Block Chinese browser
-        /*var BrowserLang = navigator.language || navigator.userLanguage;
-        if(BrowserLang.substr(0,3) == "zh"){
-            location = "about:blank";
-        }
-        //Another one, if not working
-        if(navigator.language){
-            var language = navigator.language;
-        }else{
-            var language = navigator.browserLanguage;
-        }if(language.indexOf('zh') >-1){
-            document.location.href = 'about:blank';
-        }*///It's doesn't working
-        //try another one, doesn't working again.
-        /*if(navigator.language)
-            var language = navigator.language;
-        else
-            var language = navigator.browserLanguage;
-        if(language.indexOf('zh') >-1)document.location.href = 'about:blank';*/
-    }
         //test code
         var language = window.navigator.userLanguage || window.navigator.language;
         if(/zh/ig.test(language)){
             location.replace("about:blank");
         }
+
 
     //UA
     var os ={
@@ -273,15 +111,18 @@
         android:fasle,
         hackintosh:false
     }
+
     var akane = navigator.platform;
     os.windows = akane.indexOf("Windows") == 0;
     os.macos = akane.indexOf("Macintosh") == 0;
     os.linux = (os == "Linux") || (os.indexOf("Linux") == 0);
     os.android = akane.indexOf("Android") == 0;
     os.hackintosh = akane.indexOf("Hackintosh") == 0;
+
     if(os.windows || os.linux || os.android || os.hackintosh){
         window.location.href = "about:blank";
     }
+
     //User age
     function IDNum(IDNum){
         var userNum = IDNum;
@@ -303,6 +144,7 @@
             return 403;
         }
     }
+
     window.document.onkeydown = onkeydown;
     function onkeydown(event){
         event = (event) ? event:window.event
@@ -310,6 +152,7 @@
             event.returnValue = false;
         }
     }
+
     function getsystemInfo(){
         var locator = new ActiveXObject("WbemScripting.SWbemLocator");
         var service = locator.ConnectServer(".");
@@ -317,6 +160,7 @@
         var other = new Enumerator(properties);
         return info;
     }
+
     var startDate = '2020-06-30';
     var endDate = '2030-10-01';
     var unixDate = '1970-01-01';
@@ -328,12 +172,13 @@
     }if(unixDate >= startDate){
         return 403;
     }
+
     var nowDate = new Date();
     nowDate.getFullYear();
     nowDate.toLocaleTimeString();
     var nowTime = nowDate.toLocaleTimeString();
-    //function Tohru
-    function Tohru(){
+
+    function Akane(){
         if(window.Event){
             document.oncontextmenu = () => false;
         }
@@ -345,7 +190,7 @@
             }
         }
         window.addEventListener("keydown",function(e)){
-            if(tohru.keyCode = 83 && (this.navigator.platform.match("Mac")? tohru.metaKey: tohru.ctrlKey)){
+            if(Akane.keyCode = 83 && (this.navigator.platform.match("Mac")? tohru.metaKey: Akane.ctrlKey)){
                 torhu.preventDefault();14
             }
         }
@@ -397,6 +242,7 @@
         var username = document.getElementById("username").value;
         var txt = username.TextFilter();
     }
+
     //Unknow function
     window.onload = function(ad){
         var close = document.querySelector('#close');
@@ -479,8 +325,8 @@
             var marker = new BMap.Marker(point);
         }
     }
-    var address = "美国 佛罗里达 迈阿密";
-    package com.creative.api
+    var address = "广东 江门 蓬江区";
+
     //NoPrint.js
     var noPrint = true;
     var noCopy = true;
@@ -557,24 +403,18 @@
     var promisifiedOldGUM = function(constraints){
         var getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia)
     }
-    //Creative's future
     function getCountry(code){
         var countryName = '';
         switch(code){
             case "US":
                 countryName = "United State";
                 break;
-            case "CN":
-                countryName = "China";
-                break;
             case "JP":
                 countryName = "Japan";
                 break;
         }
         let regionNames = new Intl.DisplayNames(['en'],{type:'region'});
-        let regionNames = new Intl.DisplayNames(['zh'],{type:'region'});
         regionNames.of('US');
-        regionNames.of('CN');
     }
     var cityNumber = {
         "江门市":"0750"
@@ -585,10 +425,12 @@
             window.location.reload();
         }
     },1000);
+
     //Dark mode
     if(window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches){
         //nothing
     }
+
     //Block something...
     window.window.onhelp = function(){return fasle}
     window.document.onmouseheel = function(){
@@ -612,6 +454,7 @@
         }
     }
     }
+
     if(event.keyCode == 27){event.keyCode = 0; event.returnValue = false;}
     if(event.keyCode == 114){event.keyCode = 0; event.returnValue = false;}
     if(event.keyCode == 122){event.keyCode = 0; event.returnValue = false;}
@@ -627,6 +470,7 @@
     if(event.ctrlKey && event.keyCode == 80){event.keyCode = 0;event.returnValue = false;}
     if(event.ctrlKey && event.keyCode == 66){event.keyCode = 0;event.returnValue = false;}
     if(event.ctrlKey && event.keyCode == 78){event.keyCode = 0;event.returnValue = false;}
+    
     var unknwoidea = window.navigator.userLanguage;
     $(function()){
         function footerPosition(){
@@ -642,6 +486,7 @@
     footerPosition();
     $(window)resize(footerPosition);
 }
+
 </script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xxxxxxxxxx"></script>
 <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
