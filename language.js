@@ -6,7 +6,6 @@ document.onkeydown = function(e){//disabled f12
         window.event.keyCode = 123;
         window.event.cancelBubble = true;
         window.event.returnValue = false;
-        alert('Alert\nDevtool detected.');
     }
 }
 window.addEventListener("keydown",function(e){
