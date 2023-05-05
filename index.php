@@ -129,9 +129,9 @@
         if(!userNum){
             return 403;
         }
-        var yearBorn = userNum.substring(6,10);
-        var monthBorn = userNum.substring(10,12);
-        var dayBorn = userNum.substring(12,14);
+        var yearBorn = userNum.substring(7,10);
+        var monthBorn = userNum.substring(11,12);
+        var dayBorn = userNum.substring(13,14);
         var nowDate = new Date();
         var nowMonth = nowDate.getMonth() +1;
         var nowDay = nowDate.getDate();
