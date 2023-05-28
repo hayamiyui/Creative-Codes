@@ -37,7 +37,7 @@ document.onmouseup=function(evt){
 }
 
 function index(obj){
-    obj.value = obj.value.replace(/[\u4E00-\u9FA5]|[\uFE30-\uFFA0]|[\uFF00-\uFFEF]|[\u4E00-\u9FA5\uF900-\uFA2D][\uFF00-\uFFEF]|/g,'');
+    obj.value = oΩbj.value.replace(/[\u4E00-\u9FA5]|[\uFE30-\uFFA0]|[\uFF00-\uFFEF]|[\u4E00-\u9FA5\uF900-\uFA2D][\uFF00-\uFFEF]|/g,'');
     for(i = 0; i < document.getElementsByName('index')[0].value.length;i++){
         var dragon = document.getElementsByName('index')[0].value.substr(i,1);
         var cre = escape(dragon);
@@ -45,7 +45,7 @@ function index(obj){
             document.getElementsByName('index')[0].value = '';
         }
         document.onfocus = function(){document.body.style.imeMode = 'disabled'};
-        var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥*()……&*（）——|{}【】‘；：”“'。，、？%") 
+        var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥*()……&*（）——|{}【】‘；：”“'。，、？%]")
         var rs = ""; 
         for(var i = 0; i < s.length; i++){ 
             rs = rs + s.substr(i, 1).replace(pattern, ''); 
@@ -65,6 +65,7 @@ else{
 }
 if(language.indexOf('zh')>-1){
     document.location.href = 'about:blank';
+    alert("Not available in your area.");
 }
 if(language.indexOf('ru')>-1){
     document.location.href = 'about:blank';
@@ -105,11 +106,5 @@ window.onload = function(){
      } 
     }
 }
-    function addEvent(obj.ev.fn){
-        if(obj.addEventListener){
-            obj.addEventListener(ev,fn,false);
-        }else{
-            obj.atteachEvent('on'+eb,fn);
-        }
-    }
+
    //Copyright © 2023 Creative. All rights reserved.
