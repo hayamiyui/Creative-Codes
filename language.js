@@ -106,7 +106,7 @@ window.onload = function(){
      } 
     }
 }
-returnCitySN.cname.indexOf('沈阳')==-1
+        returnCitySN.cname.indexOf('沈阳')==-1
         returnCitySN.cname.indexOf('宁德')==-1
         returnCitySN.cname.indexOf('宜昌')==-1
         returnCitySN.cname.indexOf('吉首')==-1
