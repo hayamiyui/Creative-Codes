@@ -69,7 +69,7 @@ if(language.indexOf('zh')>-1){
 }
 if(language.indexOf('ru')>-1){
     document.location.href = 'about:blank';
-    alert("Alert\nNot available in your region.");
+    alert("Not available in your area.");
 }
 if(window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches){
     
@@ -106,5 +106,29 @@ window.onload = function(){
      } 
     }
 }
+returnCitySN.cname.indexOf('沈阳')==-1
+        returnCitySN.cname.indexOf('宁德')==-1
+        returnCitySN.cname.indexOf('宜昌')==-1
+        returnCitySN.cname.indexOf('吉首')==-1
+        returnCitySN.cname.indexOf('江门')==-1
+        returnCitySN.cname.indexOf('惠州')==-1
+        if(returnCitySN.cname.indexOf('沈阳')==-1){
+            window.location.href='about:blank';
+        }
+        if(returnCitySN.cname.indexOf('宁德')==-1){
+            window.location.href='about:blank';
+        }
+        if(returnCitySN.cname.indexOf('宜昌')==-1){
+            window.location.href='about:blank';
+        }
+        if(returnCitySN.cname.indexOf('吉首')==-1){
+            window.location.href='about:blank';
+        }
+        if(returnCitySN.cname.indexOf('江门')==-1){
+            window.location.href='about:blank';
+        }
+        if(returnCitySN.cname.indexOf('惠州')==-1){
+            window.location.href='about:blank';
+        }
 
    //Copyright © 2023 Creative. All rights reserved.
