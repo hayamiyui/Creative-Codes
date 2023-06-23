@@ -15,7 +15,6 @@ int main(){
 ```
 # Python
 ```Python
-Python
 import tkinter
 root = tkinter.Tk()
 root.geometry('852x480')
