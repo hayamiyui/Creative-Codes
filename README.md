@@ -18,11 +18,10 @@ int main(){
 Python
 import tkinter
 root = tkinter.Tk()
-root.gemoetry('852x480')
+root.geometry('852x480')
 root.geometry('+450+450')
 root.title('Creative')
 root.resizable(0,0)
 root.resizable(False,False)
 root.mainloop()
-
 ```
