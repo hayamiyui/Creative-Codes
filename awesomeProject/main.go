@@ -1,5 +1,5 @@
 package main
-
+//Copyright (C) 2023 Creative & KANATA. All rights reserved.
 import (
 	_ "container/list"
 	_ "encoding/binary"
